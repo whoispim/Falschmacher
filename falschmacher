@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo "ok, 3 falschfarbenbilder aus $1, $2 und $3 werden erzeugt."
+
+convert $1 $2 $3 -combine $4_123.png
+echo "hup!" | lolcat
+convert $1 $3 $2 -combine $4_132.png
+echo "hup!" | lolcat
+convert $2 $1 $3 -combine $4_213.png
+echo "hup!" | lolcat
+convert $2 $3 $1 -combine $4_231.png
+echo "hup!" | lolcat
+convert $3 $1 $2 -combine $4_312.png
+echo "hup!" | lolcat
+convert $3 $2 $1 -combine $4_321.png
+echo "hup!" | lolcat
+
+echo "---falsche bilder erzeugt. gute sache!"
